@@ -1,7 +1,9 @@
+import Earth from "./pages/earth/Earth"
+
 function App() {
   return (
     <>
-    <p>earth</p>
+    <Earth/>
     </>
   )
 }
