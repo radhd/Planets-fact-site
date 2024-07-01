@@ -1,11 +1,26 @@
-import Earth from "./pages/earth/Earth"
+import GlobalStyles from "./GlobalStyles";
 
 function App() {
   return (
     <>
-    <Earth/>
+      <GlobalStyles />
+      <header>
+        The Planets
+        <nav>
+          <ul>
+            <li>Mercury</li>
+            <li>Mercury</li>
+            <li>Mercury</li>
+            <li>Mercury</li>
+            <li>Mercury</li>
+            <li>Mercury</li>
+            <li>Mercury</li>
+            <li>Mercury</li>
+          </ul>
+        </nav>
+      </header>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

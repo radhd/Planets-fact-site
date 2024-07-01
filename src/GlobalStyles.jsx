@@ -1,4 +1,6 @@
-*,
+import styled, { createGlobalStyle } from "styled-components";
+
+const GlobalStyles = createGlobalStyle`    *,
 *::before,
 *::after {
   box-sizing: border-box;
@@ -35,3 +37,6 @@ h6 {
 p {
   text-wrap: pretty;
 }
+`;
+
+export default GlobalStyles;
