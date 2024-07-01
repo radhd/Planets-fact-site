@@ -1,24 +1,11 @@
 import GlobalStyles from "./GlobalStyles";
+import Header from "./components/Header";
 
 function App() {
   return (
     <>
       <GlobalStyles />
-      <header>
-        The Planets
-        <nav>
-          <ul>
-            <li>Mercury</li>
-            <li>Mercury</li>
-            <li>Mercury</li>
-            <li>Mercury</li>
-            <li>Mercury</li>
-            <li>Mercury</li>
-            <li>Mercury</li>
-            <li>Mercury</li>
-          </ul>
-        </nav>
-      </header>
+      <Header/>
     </>
   );
 }

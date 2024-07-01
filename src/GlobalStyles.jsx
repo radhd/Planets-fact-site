@@ -12,9 +12,13 @@ const GlobalStyles = createGlobalStyle`    *,
   font: inherit;
 }
 
+html {
+  color-scheme: dark light;
+}
+
 body {
   min-height: 100svh;
-  background-color: whitesmoke;
+  background-color: black;
 }
 
 img,
@@ -36,6 +40,14 @@ h6 {
 
 p {
   text-wrap: pretty;
+}
+ul {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+li {
+  list-style: none;
 }
 `;
 
