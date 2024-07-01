@@ -49,6 +49,9 @@ ul {
 li {
   list-style: none;
 }
+button {
+  margin: 10px;
+}
 `;
 
 export default GlobalStyles;

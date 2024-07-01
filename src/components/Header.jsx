@@ -1,16 +1,21 @@
-import PlanetsData from "../assets/data/data.json";
 import PlanetName from "./PlanetName";
+import iconHamburger from "../assets/icon-hamburger.svg";
 
-export default function Header() {
-  const data = PlanetsData;
-  console.log(data[0]);
+export default function Header(props) {
+  const data = props.planetNames;
+
   return (
     <header>
       The Planets
       <nav>
+        <img src={iconHamburger} alt="" />
         <ul>
-          {data.map(name => {
-            return <li><PlanetName>{name.name}</PlanetName></li>;
+          {data.map((name, index) => {
+            return (
+              <li key={index}>
+                <PlanetName>{name}</PlanetName>
+              </li>
+            );
           })}
         </ul>
       </nav>
