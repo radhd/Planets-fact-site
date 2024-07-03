@@ -21,7 +21,7 @@ function App() {
           return (
             <Route
               key={index}
-              path={`/${planet.name.toLowerCase() === "mercury" ? "/" : `/${planet.name.toLowerCase()}`}`}
+              path={`/${planet.name.toLowerCase() === "mercury" ? "/" && "mercury" : `/${planet.name.toLowerCase()}`}`}
               element={
                 <DataContext.Provider value={data[index]}>
                   <Planet data={data[index]} />

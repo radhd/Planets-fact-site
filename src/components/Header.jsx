@@ -1,5 +1,6 @@
 import PlanetName from "./PlanetName";
 import iconHamburger from "../assets/icon-hamburger.svg";
+import { Link } from "react-router-dom";
 
 export default function Header(props) {
   const data = props.planetNames;
@@ -11,9 +12,12 @@ export default function Header(props) {
         <img src={iconHamburger} alt="" />
         <ul>
           {data.map((name, index) => {
+            console.log(name);
             return (
               <li key={index}>
-                <PlanetName>{name}</PlanetName>
+                <Link to={`/${name.toLowerCase()}`}>
+                  <PlanetName>{name}</PlanetName>
+                </Link>
               </li>
             );
           })}
