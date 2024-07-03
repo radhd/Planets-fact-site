@@ -17,22 +17,19 @@ function App() {
       <GlobalStyles />
       <Header planetNames={planetsNames} />
       <Routes>
-        <Route
-          path="/"
-          element={
-            <DataContext.Provider value={data[0]}>
-              <Planet data={data[0]} />
-            </DataContext.Provider>
-          }
-        />
-        <Route
-          path="/earth"
-          element={
-            <DataContext.Provider value={data[2]}>
-              <Planet data={data[2]} />
-            </DataContext.Provider>
-          }
-        />
+        {data.map((planet, index) => {
+          return (
+            <Route
+              key={index}
+              path={`/${planet.name.toLowerCase() === "mercury" ? "/" : `/${planet.name.toLowerCase()}`}`}
+              element={
+                <DataContext.Provider value={data[index]}>
+                  <Planet data={data[index]} />
+                </DataContext.Provider>
+              }
+            />
+          );
+        })}
       </Routes>
     </>
   );
