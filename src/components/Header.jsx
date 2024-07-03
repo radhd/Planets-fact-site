@@ -6,7 +6,7 @@ export default function Header(props) {
   const data = props.planetNames;
 
   return (
-    <header>
+    <header className="header">
       The Planets
       <nav>
         <img src={iconHamburger} alt="" />
