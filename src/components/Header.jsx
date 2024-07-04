@@ -35,12 +35,12 @@ export default function Header(props) {
             {data.map((name, index) => {
               return (
                 <li key={index}>
-                  <Link onClick={menuHandler} to={`/${name}`}>
+                  <StyledLink onClick={menuHandler} to={`/${name}`}>
                     <Planets>
                       <PlanetsMiniImage planetColors={planetColors[name]} />
                       <PlanetName>{name}</PlanetName>
                     </Planets>
-                  </Link>
+                  </StyledLink>
                 </li>
               );
             })}
@@ -78,4 +78,8 @@ const Planets = styled.div`
   display: flex;
   align-items: center;
   gap: 25px;
+`;
+
+const StyledLink = styled(Link)`
+  text-decoration: none;
 `;
