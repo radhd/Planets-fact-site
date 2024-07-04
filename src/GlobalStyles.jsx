@@ -18,7 +18,8 @@ html {
 
 body {
   min-height: 100svh;
-  background-color: black;
+  background-color: #070724;
+  font-family: "League Spartan", sans-serif;
 }
 
 img,
@@ -40,11 +41,6 @@ h6 {
 
 p {
   text-wrap: pretty;
-}
-ul {
-  display: flex;
-  gap: 20px;
-  padding: 20px;
 }
 li {
   list-style: none;
