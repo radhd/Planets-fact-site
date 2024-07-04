@@ -1,3 +1,7 @@
+import styled from "styled-components";
+
 export default function PlanetName({ children }) {
-  return <button>{children}</button>;
+  return <>{children}</>;
 }
+
+

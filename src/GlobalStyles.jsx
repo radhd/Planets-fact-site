@@ -42,6 +42,7 @@ h6 {
 p {
   text-wrap: pretty;
 }
+
 li {
   list-style: none;
 }

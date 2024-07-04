@@ -12,6 +12,17 @@ export default function Header(props) {
     setIsOpen(!isOpen);
   };
 
+  const planetColors = {
+    Mercury: "#DEF4FC",
+    Venus: "#F7CC7F",
+    Earth: "#545BFE",
+    Mars: "#FF6A45",
+    Jupiter: "#ECAD7A",
+    Saturn: "#FCCB6B",
+    Uranus: "#65F0D5",
+    Neptune: "#497EFA",
+  };
+
   return (
     <>
       <header>
@@ -24,8 +35,11 @@ export default function Header(props) {
             {data.map((name, index) => {
               return (
                 <li key={index}>
-                  <Link to={`/${name.toLowerCase()}`}>
-                    <PlanetName>{name}</PlanetName>
+                  <Link onClick={menuHandler} to={`/${name}`}>
+                    <Planets>
+                      <PlanetsMiniImage planetColors={planetColors[name]} />
+                      <PlanetName>{name}</PlanetName>
+                    </Planets>
                   </Link>
                 </li>
               );
@@ -47,5 +61,21 @@ const HeaderStyles = styled.div`
 
 const NavMenu = styled.nav`
   display: ${({ isOpen }) => (isOpen ? "block" : "none")};
-  background-color: red;
+  min-height: 100vh;
+`;
+
+const PlanetsMiniImage = styled.div`
+  width: 20px;
+  height: 20px;
+  background-color: ${(props) => {
+    return props.planetColors;
+  }};
+  border-radius: 50%;
+`;
+
+const Planets = styled.div`
+  padding: 44px 24px;
+  display: flex;
+  align-items: center;
+  gap: 25px;
 `;
