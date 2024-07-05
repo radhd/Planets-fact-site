@@ -38,6 +38,7 @@ export default function Header(props) {
                   <StyledLink onClick={menuHandler} to={`/${name}`}>
                     <Planets>
                       <PlanetsMiniImage planetColors={planetColors[name]} />
+
                       <PlanetName>{name}</PlanetName>
                     </Planets>
                   </StyledLink>

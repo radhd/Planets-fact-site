@@ -18,9 +18,10 @@ html {
 
 body {
   min-height: 100svh;
-  background-color: #070724;
+  background-color: ${(props) => props.theme.background};
   font-family: "League Spartan", sans-serif;
 }
+
 
 img,
 picture,
