@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
-export default function ButtonOverview({ children, onClick, isActive }) {
+export default function ButtonOverview({ children, onClick, isActive, name }) {
   return (
     <>
-      <OverviewButton onClick={onClick} isActive={isActive}>
+      <OverviewButton onClick={onClick} isActive={isActive} name={name}>
         {children}
       </OverviewButton>
     </>
@@ -15,7 +15,8 @@ const OverviewButton = styled.button`
   outline: none;
   background-color: transparent;
   opacity: 50%;
-  padding: 20px 17px;
-  ${({ isActive }) =>
-    isActive ? `border-bottom: 2px solid red;` : `border-bottom: none`};
+  ${(props) =>
+    props.isActive
+      ? `border-bottom: 2px solid ${props.theme[props.name]}; opacity: 100%;`
+      : `border-bottom: none`};
 `;

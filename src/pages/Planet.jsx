@@ -15,27 +15,37 @@ export default function Planet() {
 
   return (
     <>
-      <section>
+      <OverviewSection>
         <ButtonOverview
           onClick={toggleHandler}
           isActive={isActive === "Overview"}
+          name={data.name}
         >
           Overview
         </ButtonOverview>
         <ButtonOverview
           onClick={toggleHandler}
           isActive={isActive === "Structure"}
+          name={data.name}
         >
           Structure
         </ButtonOverview>
         <ButtonOverview
           onClick={toggleHandler}
           isActive={isActive === "Surface"}
+          name={data.name}
         >
           Surface
         </ButtonOverview>
-      </section>
+      </OverviewSection>
       <Information data={data} />
     </>
   );
 }
+
+const OverviewSection = styled.section`
+  border-bottom: 1px solid #38384f;
+  padding: 20px 24px;
+  display: flex;
+  justify-content: space-between;
+`;
