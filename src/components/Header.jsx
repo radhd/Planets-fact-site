@@ -3,6 +3,7 @@ import iconHamburger from "../assets/icon-hamburger.svg";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { useState } from "react";
+import iconChevron from "../assets/icon-chevron.svg";
 
 export default function Header(props) {
   const data = props.planetNames;
@@ -37,9 +38,11 @@ export default function Header(props) {
                 <li key={index}>
                   <StyledLink onClick={menuHandler} to={`/${name}`}>
                     <Planets>
-                      <PlanetsMiniImage planetColors={planetColors[name]} />
-
-                      <PlanetName>{name.toUpperCase()}</PlanetName>
+                      <FlexDiv>
+                        <PlanetsMiniImage planetColors={planetColors[name]} />
+                        <PlanetName>{name.toUpperCase()}</PlanetName>
+                      </FlexDiv>
+                      <ChevronNavigation />
                     </Planets>
                   </StyledLink>
                 </li>
@@ -79,7 +82,10 @@ const Planets = styled.div`
   padding: 24px 24px;
   display: flex;
   align-items: center;
-  gap: 25px;
+  /*  */
+  justify-content: space-between;
+  /*  */
+  /* gap: 25px; */
   border-top: 1px solid #38384f;
 `;
 
@@ -91,4 +97,18 @@ const StyledLink = styled(Link)`
   font-weight: 700;
   line-height: 25px;
   letter-spacing: 1.3636363744735718px;
+`;
+
+const ChevronNavigation = styled.div`
+  background-image: url(${iconChevron});
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+`;
+
+const FlexDiv = styled.div`
+  display: flex;
+  gap: 25px;
+  align-items: center;
 `;
