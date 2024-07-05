@@ -3,7 +3,7 @@ import styled from "styled-components";
 export default function ButtonOverview({ children, onClick, isActive, name }) {
   return (
     <>
-      <OverviewButton onClick={onClick} isActive={isActive} name={name}>
+      <OverviewButton onClick={onClick} isActive={isActive}>
         {children}
         {isActive && <OverviewLine name={name} />}
       </OverviewButton>
