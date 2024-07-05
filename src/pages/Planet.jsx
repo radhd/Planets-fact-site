@@ -45,7 +45,7 @@ export default function Planet() {
 
 const OverviewSection = styled.section`
   border-bottom: 1px solid #38384f;
-  padding: 20px 24px;
+  padding: 17px 24px;
   display: flex;
   justify-content: space-between;
 `;
