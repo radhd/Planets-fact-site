@@ -82,10 +82,7 @@ const Planets = styled.div`
   padding: 24px 24px;
   display: flex;
   align-items: center;
-  /*  */
   justify-content: space-between;
-  /*  */
-  /* gap: 25px; */
   border-top: 1px solid #38384f;
 `;
 
