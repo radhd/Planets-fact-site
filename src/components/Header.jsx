@@ -39,7 +39,7 @@ export default function Header(props) {
                     <Planets>
                       <PlanetsMiniImage planetColors={planetColors[name]} />
 
-                      <PlanetName>{name}</PlanetName>
+                      <PlanetName>{name.toUpperCase()}</PlanetName>
                     </Planets>
                   </StyledLink>
                 </li>
@@ -58,6 +58,7 @@ const HeaderStyles = styled.div`
   justify-content: space-between;
   font-family: "Antonio", sans-serif;
   padding: 16px 24px;
+  border-bottom: 1px solid #38384f;
 `;
 
 const NavMenu = styled.nav`
@@ -75,12 +76,19 @@ const PlanetsMiniImage = styled.div`
 `;
 
 const Planets = styled.div`
-  padding: 44px 24px;
+  padding: 24px 24px;
   display: flex;
   align-items: center;
   gap: 25px;
+  border-top: 1px solid #38384f;
 `;
 
 const StyledLink = styled(Link)`
   text-decoration: none;
+  font-family: "League Spartan", sans-serif;
+  color: white;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  line-height: 25px;
+  letter-spacing: 1.3636363744735718px;
 `;
