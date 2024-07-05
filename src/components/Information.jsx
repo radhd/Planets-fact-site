@@ -1,10 +1,13 @@
 import iconSource from "../assets/icon-source.svg";
+import styled from "styled-components";
 
 export default function Information({ data }) {
   return (
-    <section>
-      <img src={data.images.planet} alt="" />
-      <h1>{data.name}</h1>
+    <InformationWrapper>
+      <ImageContainer>
+        <img src={data.images.planet} alt="" />
+      </ImageContainer>
+      <Title>{data.name}</Title>
       <p>{data.overview.content}</p>
       <div>
         <p>
@@ -24,9 +27,22 @@ export default function Information({ data }) {
       <div>
         <span>Average Temp</span> <span>{data.rotation}</span>
       </div>
-    </section>
+    </InformationWrapper>
   );
 }
 
+const InformationWrapper = styled.section`
+  text-align: center;
+`;
 
+const ImageContainer = styled.div`
+  width: 111px;
+  height: 111px;
+  margin: 95px auto;
+`;
 
+const Title = styled.h1`
+  font-family: "Antonio", sans-serif;
+  font-size: 2.5rem;
+  text-align: center;
+`;
