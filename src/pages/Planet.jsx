@@ -5,7 +5,7 @@ import ButtonOverview from "../components/ButtonOverview";
 import styled from "styled-components";
 
 export default function Planet() {
-  const [isActive, setIsActive] = useState("Overview");
+  const [isActive, setIsActive] = useState("OVERVIEW");
 
   const data = useContext(DataContext);
 
@@ -18,24 +18,24 @@ export default function Planet() {
       <OverviewSection>
         <ButtonOverview
           onClick={toggleHandler}
-          isActive={isActive === "Overview"}
+          isActive={isActive === "OVERVIEW"}
           name={data.name}
         >
-          Overview
+          OVERVIEW
         </ButtonOverview>
         <ButtonOverview
           onClick={toggleHandler}
-          isActive={isActive === "Structure"}
+          isActive={isActive === "STRUCTURE"}
           name={data.name}
         >
-          Structure
+          STRUCTURE
         </ButtonOverview>
         <ButtonOverview
           onClick={toggleHandler}
-          isActive={isActive === "Surface"}
+          isActive={isActive === "SURFACE"}
           name={data.name}
         >
-          Surface
+          SURFACE
         </ButtonOverview>
       </OverviewSection>
       <Information data={data} />

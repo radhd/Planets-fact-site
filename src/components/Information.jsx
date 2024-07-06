@@ -36,8 +36,7 @@ const InformationWrapper = styled.section`
 `;
 
 const ImageContainer = styled.div`
-  width: 111px;
-  height: 111px;
+  max-width: 111px;
   margin: 95px auto;
 `;
 
