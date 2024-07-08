@@ -4,7 +4,7 @@ import styled from "styled-components";
 export default function Information({ data }) {
   return (
     <InformationWrapper>
-      <PlanetImage images={data.images}></PlanetImage>
+      <PlanetImage images={data.images} name={data.name}></PlanetImage>
 
       {/* <ImageContainer>
         <img src={data.images.planet} alt="" />
@@ -38,7 +38,7 @@ const PlanetImage = styled.div`
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  height: 111px;
+  height: ${(props) => props.theme[props.name].imageSize.small.height};
 `;
 
 const InformationWrapper = styled.section`

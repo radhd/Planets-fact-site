@@ -43,7 +43,7 @@ const defaultTheme = {
     color: "#DEF4FC",
     imageSize: {
       small: {
-        height: 111,
+        height: "111px",
       },
     },
   },
@@ -51,7 +51,7 @@ const defaultTheme = {
     color: "#F7CC7F",
     imageSize: {
       small: {
-        height: 222,
+        height: "154px",
       },
     },
   },
@@ -59,7 +59,7 @@ const defaultTheme = {
     color: "#545BFE",
     imageSize: {
       small: {
-        height: 333,
+        height: "173px",
       },
     },
   },
@@ -67,7 +67,7 @@ const defaultTheme = {
     color: "#FF6A45",
     imageSize: {
       small: {
-        height: 444,
+        height: "129px",
       },
     },
   },
@@ -75,7 +75,7 @@ const defaultTheme = {
     color: "#ECAD7A",
     imageSize: {
       small: {
-        height: 555,
+        height: "224px",
       },
     },
   },
@@ -83,7 +83,7 @@ const defaultTheme = {
     color: "#FCCB6B",
     imageSize: {
       small: {
-        height: 666,
+        height: "256px",
       },
     },
   },
@@ -91,7 +91,7 @@ const defaultTheme = {
     color: "#65F0D5",
     imageSize: {
       small: {
-        height: 777,
+        height: "176px",
       },
     },
   },
@@ -99,7 +99,7 @@ const defaultTheme = {
     color: "#497EFA",
     imageSize: {
       small: {
-        height: 888,
+        height: "173px",
       },
     },
   },
