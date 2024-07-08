@@ -10,12 +10,7 @@ export default function Information({ data, isActive }) {
         altText={data.name}
         isActive={isActive}
       >
-        <PlanetGeology
-          images={data.images}
-          name={data.name}
-          altText={data.name}
-          isActive={isActive}
-        />
+        <PlanetGeology images={data.images} isActive={isActive} />
       </PlanetImage>
 
       <Wrapper>
@@ -65,16 +60,21 @@ const PlanetImage = styled.div`
 `;
 
 const PlanetGeology = styled.div`
-  background-image: url(${(props) => props.images.geology});
+  background-image: url(${(props) =>
+    props.isActive === "STRUCTURE" ? props.images.geology : null});
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: center;
-  height: 100px;
+  height: 70px;
   margin: 76px 0;
+  position: absolute;
+  top: 5%;
+  left: 43%;
+  aspect-ratio: 1;
 `;
 
 const InformationWrapper = styled.section`
   text-align: center;
+  position: relative;
 `;
 
 const Title = styled.h1`
