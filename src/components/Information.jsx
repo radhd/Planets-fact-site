@@ -1,22 +1,33 @@
 import iconSource from "../assets/icon-source.svg";
 import styled from "styled-components";
 
-export default function Information({ data }) {
+export default function Information({ data, isActive }) {
   return (
     <InformationWrapper>
-      <PlanetImage images={data.images} name={data.name}></PlanetImage>
+      <PlanetImage
+        images={data.images}
+        name={data.name}
+        altText={data.name}
+        isActive={isActive}
+      >
+        <PlanetGeology
+          images={data.images}
+          name={data.name}
+          altText={data.name}
+          isActive={isActive}
+        />
+      </PlanetImage>
 
-      {/* <ImageContainer>
-        <img src={data.images.planet} alt="" />
-      </ImageContainer> */}
-      <Title>{data.name}</Title>
-      <p>{data.overview.content}</p>
-      <div>
-        <p>
-          Source: <a href={data.overview.source}>Wikipedia</a>
-        </p>
-        <img src={iconSource} alt="" />
-      </div>
+      <Wrapper>
+        <Title>{data.name}</Title>
+        <DataOverviewParagraph>{data.overview.content}</DataOverviewParagraph>
+        <div>
+          <p>
+            Source: <a href={data.overview.source}>Wikipedia</a>
+          </p>
+          <img src={iconSource} alt="" />
+        </div>
+      </Wrapper>
       <div>
         <span>Rotation Time</span> <span>{data.rotation}</span>
       </div>
@@ -33,25 +44,44 @@ export default function Information({ data }) {
   );
 }
 
+const DataOverviewParagraph = styled.p`
+  font-size: 0.6875rem;
+  margin: 16px 0 32px;
+  opacity: 70%;
+`;
+
 const PlanetImage = styled.div`
-  background-image: url(${(props) => props.images.planet});
+  background-image: url(${(props) =>
+    props.isActive === "OVERVIEW"
+      ? props.images.planet
+      : props.isActive === "SURFACE"
+        ? props.images.internal
+        : props.images.planet});
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   height: ${(props) => props.theme[props.name].imageSize.small.height};
+  margin: 76px 0;
+`;
+
+const PlanetGeology = styled.div`
+  background-image: url(${(props) => props.images.geology});
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100px;
+  margin: 76px 0;
 `;
 
 const InformationWrapper = styled.section`
   text-align: center;
 `;
 
-const ImageContainer = styled.div`
-  max-width: 111px;
-  margin: 95px auto;
-`;
-
 const Title = styled.h1`
   font-family: "Antonio", sans-serif;
   font-size: 2.5rem;
-  text-align: center;
+`;
+
+const Wrapper = styled.div`
+  padding: 0 24px 28px;
 `;

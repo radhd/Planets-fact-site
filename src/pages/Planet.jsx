@@ -38,7 +38,7 @@ export default function Planet() {
           SURFACE
         </ButtonOverview>
       </OverviewSection>
-      <Information data={data} />
+      <Information data={data} isActive={isActive} />
     </>
   );
 }
