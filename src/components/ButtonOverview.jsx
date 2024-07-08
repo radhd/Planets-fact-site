@@ -26,5 +26,5 @@ const OverviewLine = styled.div`
   height: 4px;
   position: absolute;
   bottom: -17px;
-  background-color: ${({ theme, name }) => theme[name]};
+  background-color: ${({ theme, name }) => theme[name].color};
 `;

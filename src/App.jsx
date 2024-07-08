@@ -39,14 +39,70 @@ function App() {
 const defaultTheme = {
   background: "#070724",
   white: "#FFFFFF",
-  Mercury: "#DEF4FC",
-  Venus: "#F7CC7F",
-  Earth: "#545BFE",
-  Mars: "#FF6A45",
-  Jupiter: "#ECAD7A",
-  Saturn: "#FCCB6B",
-  Uranus: "#65F0D5",
-  Neptune: "#497EFA",
+  Mercury: {
+    color: "#DEF4FC",
+    imageSize: {
+      small: {
+        height: 111,
+      },
+    },
+  },
+  Venus: {
+    color: "#F7CC7F",
+    imageSize: {
+      small: {
+        height: 222,
+      },
+    },
+  },
+  Earth: {
+    color: "#545BFE",
+    imageSize: {
+      small: {
+        height: 333,
+      },
+    },
+  },
+  Mars: {
+    color: "#FF6A45",
+    imageSize: {
+      small: {
+        height: 444,
+      },
+    },
+  },
+  Jupiter: {
+    color: "#ECAD7A",
+    imageSize: {
+      small: {
+        height: 555,
+      },
+    },
+  },
+  Saturn: {
+    color: "#FCCB6B",
+    imageSize: {
+      small: {
+        height: 666,
+      },
+    },
+  },
+  Uranus: {
+    color: "#65F0D5",
+    imageSize: {
+      small: {
+        height: 777,
+      },
+    },
+  },
+  Neptune: {
+    color: "#497EFA",
+    imageSize: {
+      small: {
+        height: 888,
+      },
+    },
+  },
 };
 
 // const planetColors = {

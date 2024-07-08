@@ -4,9 +4,11 @@ import styled from "styled-components";
 export default function Information({ data }) {
   return (
     <InformationWrapper>
-      <ImageContainer>
+      <PlanetImage images={data.images}></PlanetImage>
+
+      {/* <ImageContainer>
         <img src={data.images.planet} alt="" />
-      </ImageContainer>
+      </ImageContainer> */}
       <Title>{data.name}</Title>
       <p>{data.overview.content}</p>
       <div>
@@ -30,6 +32,14 @@ export default function Information({ data }) {
     </InformationWrapper>
   );
 }
+
+const PlanetImage = styled.div`
+  background-image: url(${(props) => props.images.planet});
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 111px;
+`;
 
 const InformationWrapper = styled.section`
   text-align: center;
