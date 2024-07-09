@@ -17,27 +17,67 @@ export default function Information({ data, isActive }) {
         <Title>{data.name}</Title>
         <DataOverviewParagraph>{data.overview.content}</DataOverviewParagraph>
         <div>
-          <p>
-            Source: <a href={data.overview.source}>Wikipedia</a>
-          </p>
-          <img src={iconSource} alt="" />
+          <DataOverviewParagraph>
+            Source:{" "}
+            <DivWikipedia>
+              <ParagraphA href={data.overview.source}>Wikipedia</ParagraphA>
+              <img src={iconSource} alt="" />
+            </DivWikipedia>
+          </DataOverviewParagraph>
         </div>
       </Wrapper>
-      <div>
-        <span>Rotation Time</span> <span>{data.rotation}</span>
-      </div>
-      <div>
-        <span>Revolution Time</span> <span>{data.revolution}</span>
-      </div>
-      <div>
-        <span>Radius</span> <span>{data.radius}</span>
-      </div>
-      <div>
-        <span>Average Temp</span> <span>{data.rotation}</span>
-      </div>
+      <WrapperRotations>
+        <RotationsBorders>
+          <RotationsColor>Rotation Time</RotationsColor>{" "}
+          <RotationDays>{data.rotation}</RotationDays>
+        </RotationsBorders>
+        <RotationsBorders>
+          <RotationsColor>Revolution Time</RotationsColor>{" "}
+          <RotationDays>{data.revolution}</RotationDays>
+        </RotationsBorders>
+        <RotationsBorders>
+          <RotationsColor>Radius</RotationsColor>{" "}
+          <RotationDays>{data.radius}</RotationDays>
+        </RotationsBorders>
+        <RotationsBorders>
+          <RotationsColor>Average Temp</RotationsColor>{" "}
+          <RotationDays>{data.rotation}</RotationDays>
+        </RotationsBorders>
+      </WrapperRotations>
     </InformationWrapper>
   );
 }
+
+const RotationDays = styled.span`
+  font-size: 1.25rem;
+`;
+
+const RotationsColor = styled.span`
+  color: white;
+  opacity: 70%;
+`;
+
+const RotationsBorders = styled.div`
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  border: 1px solid gray;
+  padding: 9px 24px 13px;
+  margin-bottom: 8px;
+`;
+
+const WrapperRotations = styled.div`
+  padding: 0 24px 47px;
+`;
+
+const DivWikipedia = styled.div`
+  display: inline-flex;
+  align-items: center;
+`;
+
+const ParagraphA = styled.a`
+  color: white;
+`;
 
 const DataOverviewParagraph = styled.p`
   font-size: 0.6875rem;
