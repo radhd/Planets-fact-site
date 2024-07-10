@@ -62,7 +62,8 @@ export default function Header(props) {
 const UlFlex = styled.ul`
   @media (min-width: 768px) {
     display: flex;
-    flex-wrap: wrap;
+    justify-content: center;
+    gap: 33px;
   }
 `;
 
@@ -84,6 +85,7 @@ const HeaderStyles = styled.div`
   @media (min-width: 768px) {
     justify-content: center;
     font-size: 1.75rem;
+    border-bottom: 0px solid #38384f;
   }
 `;
 
@@ -92,7 +94,9 @@ const NavMenu = styled.nav`
   min-height: 100vh;
   @media (min-width: 768px) {
     min-height: 0;
-    display: flex;
+    display: ${({ isOpen }) => (isOpen ? "block" : "block")};
+    padding: 40px 51px 27px;
+    border-bottom: 1px solid #38384f;
   }
 `;
 
@@ -109,7 +113,7 @@ const PlanetsMiniImage = styled.div`
 `;
 
 const Planets = styled.div`
-  padding: 24px 24px;
+  padding: 24px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -118,7 +122,8 @@ const Planets = styled.div`
     justify-content: center;
     font-size: 0.6875rem;
     opacity: 70%;
-    cursor: pointer;
+    padding: 0px;
+    border-top: 0px solid #38384f;
   }
 `;
 
