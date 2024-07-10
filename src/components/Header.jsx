@@ -29,10 +29,14 @@ export default function Header(props) {
       <header>
         <HeaderStyles>
           <div>THE PLANETS</div>
-          <img onClick={menuHandler} src={iconHamburger} alt="hamburger menu" />
+          <ImgBurger
+            onClick={menuHandler}
+            src={iconHamburger}
+            alt="hamburger menu"
+          />
         </HeaderStyles>
         <NavMenu isOpen={isOpen}>
-          <ul>
+          <UlFlex>
             {data.map((name, index) => {
               return (
                 <li key={index}>
@@ -48,12 +52,27 @@ export default function Header(props) {
                 </li>
               );
             })}
-          </ul>
+          </UlFlex>
         </NavMenu>
       </header>
     </>
   );
 }
+
+const UlFlex = styled.ul`
+  @media (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+`;
+
+const ImgBurger = styled.img`
+  background-image: url("../assets/icon-hamburger.svg");
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+`;
 
 const HeaderStyles = styled.div`
   display: flex;
@@ -62,11 +81,19 @@ const HeaderStyles = styled.div`
   font-family: "Antonio", sans-serif;
   padding: 16px 24px;
   border-bottom: 1px solid #38384f;
+  @media (min-width: 768px) {
+    justify-content: center;
+    font-size: 1.75rem;
+  }
 `;
 
 const NavMenu = styled.nav`
   display: ${({ isOpen }) => (isOpen ? "block" : "none")};
   min-height: 100vh;
+  @media (min-width: 768px) {
+    min-height: 0;
+    display: flex;
+  }
 `;
 
 const PlanetsMiniImage = styled.div`
@@ -76,6 +103,9 @@ const PlanetsMiniImage = styled.div`
     return props.planetColors;
   }};
   border-radius: 50%;
+  @media (min-width: 768px) {
+    display: none;
+  }
 `;
 
 const Planets = styled.div`
@@ -84,6 +114,12 @@ const Planets = styled.div`
   align-items: center;
   justify-content: space-between;
   border-top: 1px solid #38384f;
+  @media (min-width: 768px) {
+    justify-content: center;
+    font-size: 0.6875rem;
+    opacity: 70%;
+    cursor: pointer;
+  }
 `;
 
 const StyledLink = styled(Link)`
@@ -102,6 +138,9 @@ const ChevronNavigation = styled.div`
   height: 20px;
   background-repeat: no-repeat;
   background-position: center;
+  @media (min-width: 768px) {
+    display: none;
+  }
 `;
 
 const FlexDiv = styled.div`
