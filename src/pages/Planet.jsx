@@ -14,7 +14,7 @@ export default function Planet() {
   };
 
   return (
-    <main>
+    <MainWrapper>
       <OverviewSection>
         <ButtonOverview
           onClick={toggleHandler}
@@ -39,11 +39,16 @@ export default function Planet() {
         </ButtonOverview>
       </OverviewSection>
       <Information data={data} isActive={isActive} />
-    </main>
+    </MainWrapper>
   );
 }
 
-const OverviewSection = styled.section`
+const MainWrapper = styled.main`
+  display: flex;
+  flex-direction: column;
+`;
+
+const OverviewSection = styled.div`
   border-bottom: 1px solid #38384f;
   padding: 17px 24px;
   display: flex;

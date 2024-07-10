@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export default function Information({ data, isActive }) {
   return (
-    <InformationWrapper>
+    <>
       <PlanetImage
         images={data.images}
         name={data.name}
@@ -44,7 +44,7 @@ export default function Information({ data, isActive }) {
           <RotationDays>{data.rotation}</RotationDays>
         </RotationsBorders>
       </WrapperRotations>
-    </InformationWrapper>
+    </>
   );
 }
 
@@ -98,9 +98,8 @@ const PlanetImage = styled.div`
   height: ${(props) => props.theme[props.name].imageSize.small.height};
   margin: 76px 0;
   @media (min-width: 768px) {
-    /* height: ${(props) => props.theme[props.name].imageSize}; */
-
-    height: ${(props) => console.log(props.theme[props.name].imageSize.medium)};
+    height: ${(props) => props.theme[props.name].imageSize.medium.height};
+    order: -1;
   }
 `;
 
@@ -117,16 +116,18 @@ const PlanetGeology = styled.div`
   aspect-ratio: 1;
 `;
 
-const InformationWrapper = styled.section`
-  text-align: center;
-  position: relative;
-`;
-
 const Title = styled.h1`
   font-family: "Antonio", sans-serif;
   font-size: 2.5rem;
+  @media (min-width: 768px) {
+    font-size: 3rem;
+  }
 `;
 
 const Wrapper = styled.div`
   padding: 0 24px 28px;
+  text-align: center;
+  @media (min-width: 768px) {
+    text-align: left;
+  }
 `;
