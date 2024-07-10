@@ -14,7 +14,7 @@ export default function Planet() {
   };
 
   return (
-    <>
+    <main>
       <OverviewSection>
         <ButtonOverview
           onClick={toggleHandler}
@@ -39,7 +39,7 @@ export default function Planet() {
         </ButtonOverview>
       </OverviewSection>
       <Information data={data} isActive={isActive} />
-    </>
+    </main>
   );
 }
 

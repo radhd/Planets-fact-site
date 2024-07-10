@@ -97,6 +97,11 @@ const PlanetImage = styled.div`
   background-position: center;
   height: ${(props) => props.theme[props.name].imageSize.small.height};
   margin: 76px 0;
+  @media (min-width: 768px) {
+    /* height: ${(props) => props.theme[props.name].imageSize}; */
+
+    height: ${(props) => console.log(props.theme[props.name].imageSize.medium)};
+  }
 `;
 
 const PlanetGeology = styled.div`

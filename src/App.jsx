@@ -45,6 +45,12 @@ const defaultTheme = {
       small: {
         height: "111px",
       },
+      medium: {
+        height: "184px",
+      },
+      large: {
+        height: "290px",
+      },
     },
   },
   Venus: {
@@ -52,6 +58,12 @@ const defaultTheme = {
     imageSize: {
       small: {
         height: "154px",
+      },
+      medium: {
+        height: "253px",
+      },
+      large: {
+        height: "400px",
       },
     },
   },
@@ -61,6 +73,12 @@ const defaultTheme = {
       small: {
         height: "173px",
       },
+      medium: {
+        height: "285px",
+      },
+      large: {
+        height: "450px",
+      },
     },
   },
   Mars: {
@@ -68,6 +86,12 @@ const defaultTheme = {
     imageSize: {
       small: {
         height: "129px",
+      },
+      medium: {
+        height: "213px",
+      },
+      large: {
+        height: "336px",
       },
     },
   },
@@ -77,6 +101,12 @@ const defaultTheme = {
       small: {
         height: "224px",
       },
+      medium: {
+        height: "369px",
+      },
+      large: {
+        height: "582px",
+      },
     },
   },
   Saturn: {
@@ -84,6 +114,12 @@ const defaultTheme = {
     imageSize: {
       small: {
         height: "256px",
+      },
+      medium: {
+        height: "422px",
+      },
+      large: {
+        height: "665px",
       },
     },
   },
@@ -93,6 +129,12 @@ const defaultTheme = {
       small: {
         height: "176px",
       },
+      medium: {
+        height: "290px",
+      },
+      large: {
+        height: "458px",
+      },
     },
   },
   Neptune: {
@@ -100,6 +142,12 @@ const defaultTheme = {
     imageSize: {
       small: {
         height: "173px",
+      },
+      medium: {
+        height: "285px",
+      },
+      large: {
+        height: "450px",
       },
     },
   },
