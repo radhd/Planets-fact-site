@@ -96,10 +96,12 @@ const PlanetImage = styled.div`
   background-repeat: no-repeat;
   background-position: center;
   height: ${(props) => props.theme[props.name].imageSize.small.height};
-  margin: 76px 0;
+  margin: 95px 0;
+  position: relative;
   @media (min-width: 768px) {
     height: ${(props) => props.theme[props.name].imageSize.medium.height};
     order: -1;
+    margin: 146px 0;
   }
 `;
 
@@ -108,12 +110,14 @@ const PlanetGeology = styled.div`
     props.isActive === "STRUCTURE" ? props.images.geology : null});
   background-size: contain;
   background-repeat: no-repeat;
-  height: 70px;
-  margin: 76px 0;
+  width: 100%;
+  height: 169px;
+  background-position: center;
   position: absolute;
-  top: 5%;
-  left: 43%;
-  aspect-ratio: 1;
+  top: 45px;
+  @media (min-width: 768px) {
+    top: 150px;
+  }
 `;
 
 const Title = styled.h1`
