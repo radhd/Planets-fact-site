@@ -46,6 +46,9 @@ export default function Planet() {
 const MainWrapper = styled.main`
   display: flex;
   flex-direction: column;
+  @media (min-width: 768px) {
+    position: relative;
+  }
 `;
 
 const OverviewSection = styled.div`
@@ -53,4 +56,16 @@ const OverviewSection = styled.div`
   padding: 17px 24px;
   display: flex;
   justify-content: space-between;
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    background-color: red;
+    width: 40%;
+    margin: 0 40px;
+    width: calc(50% - 40px);
+    position: absolute;
+    right: 0;
+    top: 520px;
+  }
 `;

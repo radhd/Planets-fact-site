@@ -133,5 +133,7 @@ const Wrapper = styled.div`
   text-align: center;
   @media (min-width: 768px) {
     text-align: left;
+    width: calc(50% - 40px);
+    margin: 0 40px;
   }
 `;

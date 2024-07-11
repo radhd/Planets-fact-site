@@ -27,4 +27,7 @@ const OverviewLine = styled.div`
   position: absolute;
   bottom: -17px;
   background-color: ${({ theme, name }) => theme[name].color};
+  @media (min-width: 768px) {
+    display: none;
+  }
 `;
